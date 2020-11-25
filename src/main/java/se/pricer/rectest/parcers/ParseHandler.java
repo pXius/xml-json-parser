@@ -58,7 +58,9 @@ public class ParseHandler {
     }
 
     private static void printToConsole(List<Food> menu) {
+        System.out.println("\n<*><*> Breakfast Menu <*><*>\n");
         menu.forEach(System.out::println);
+        System.out.println("<*><*><*> End <*><*><*>");
     }
 
     private static String getFileExtension(String fileName) {
