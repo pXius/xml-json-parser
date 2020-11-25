@@ -3,7 +3,7 @@ package se.pricer.rectest.parcers.xmlparser;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
-import se.pricer.rectest.parcers.model.Food;
+import se.pricer.rectest.parcers.models.Food;
 
 import java.util.ArrayList;
 import java.util.List;
