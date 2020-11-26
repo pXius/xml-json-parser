@@ -20,8 +20,12 @@ public class FoodXMLParser {
             FoodHandler handler = new FoodHandler();
             saxParser.parse(new File(fileName), handler);
             unsortedMenu = handler.getMenu();
-        } catch (ParserConfigurationException | IOException | SAXException e) {
-            e.printStackTrace();
+        } catch (SAXException e) {
+            System.out.println(" XML FORMATTING NOT ACCEPTABLE!");
+        } catch (IOException e) {
+            System.out.println("FILE NOT FOUND!");
+        } catch (ParserConfigurationException e) {
+            System.out.println("PARSER CONFIGURATION ERROR!");
         }
         return unsortedMenu;
     }

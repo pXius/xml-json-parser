@@ -45,7 +45,7 @@ public class ParseHandler {
         }
     }
 
-    private static List<Food> sortMenuItemsByName(List<Food> menu, String ascOrDesc) {
+    public static List<Food> sortMenuItemsByName(List<Food> menu, String ascOrDesc) {
         switch (ascOrDesc.toLowerCase()) {
             case "desc":
                 return menu.stream().sorted(Comparator.comparing(Food::getNameLower)).collect(Collectors.toList());
@@ -58,6 +58,7 @@ public class ParseHandler {
     }
 
     private static void printToConsole(List<Food> menu) {
+        if (menu == null) return;
         System.out.println("\n<*><*> Breakfast Menu <*><*>\n");
         menu.forEach(System.out::println);
         System.out.println("<*><*><*> End <*><*><*>");

@@ -1,6 +1,7 @@
 package se.pricer.rectest.parcers.jsonparser;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
 import se.pricer.rectest.parcers.models.Food;
 
 import java.io.FileNotFoundException;
@@ -16,7 +17,9 @@ public class FoodJsonParser {
             FoodJsonSchema parsedMenu = gson.fromJson(new FileReader(filename), FoodJsonSchema.class);
             unsortedMenu = parsedMenu.getBreakfastMenu().getFood();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
+            System.out.println("FILE NOT FOUND!");
+        } catch (JsonSyntaxException e) {
+            System.out.println("JSON FORMATTING NOT ACCEPTABLE!");
         }
         return unsortedMenu;
     }
