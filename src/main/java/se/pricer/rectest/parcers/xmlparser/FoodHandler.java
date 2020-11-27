@@ -21,6 +21,11 @@ public class FoodHandler extends DefaultHandler {
         return menu;
     }
 
+    /**
+     * If a "food" tag is found, create a food object and Array if one does not yet exist.
+     * If any of the specified tags are found, mark them true to be processed for inner data.
+     * Initialise a string builder to which data will be concatenated.
+     */
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
         switch (qName.toLowerCase()) {
@@ -43,6 +48,10 @@ public class FoodHandler extends DefaultHandler {
         data = new StringBuilder();
     }
 
+    /**
+     * Concat the data inside the tags (see characters method), set to true in the startElement method.
+     * When the closing "food" tag is reached, add the food item to the previously created array list.
+     */
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
         if (bName) {
@@ -61,6 +70,9 @@ public class FoodHandler extends DefaultHandler {
         if (qName.equalsIgnoreCase("food")) menu.add(menuItem);
     }
 
+    /**
+     * The handler parses data between tags in chunks. A string builder is used to stitch the data together.
+     */
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
         data.append(new String(ch, start, length));

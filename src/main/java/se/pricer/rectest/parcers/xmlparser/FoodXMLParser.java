@@ -12,6 +12,12 @@ import java.util.List;
 
 public class FoodXMLParser {
 
+    /**
+     * Creates a SAX parser instance to which a 'SAX handler' matching the XML schema and the XML
+     * file are passed.
+     * @param fileName path to the file being parsed in String format.
+     * @return returns a List of Food objects.
+     */
     public static List<Food> parse(String fileName) {
         SAXParserFactory saxParserFactory = SAXParserFactory.newInstance();
         List<Food> unsortedMenu = null;
