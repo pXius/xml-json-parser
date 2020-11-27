@@ -27,9 +27,11 @@ You can download the latest version form => [HERE](https://www.java.com/en/downl
 Download the utility from the release section: => [HERE](https://github.com/pXius/xml-json-parser/releases)  
 
 Run the utility using 'java -jar' followed by the filepath of the file you would like to parse:  
+i.e.   
 `java -jar menu.jar /the/path/to/your/file.json`
 
-The utility supports sorting by name. Use 'asc' or 'desc' after the filename to sort the file in ascending or descending order respectively. i.e.  
+The utility supports sorting by name. Use 'asc' or 'desc' after the filename to sort the file in ascending or descending order respectively.  
+i.e.  
 `java -jar menu.jar myfile.xml desc` or `java -jar menu.jar anotherfile.json asc`  
 
 If no sorting argument is passed, or an invalid argument is passed, the utility will not sort the file and keep the original order.  
@@ -40,7 +42,7 @@ Alternatively you can clone this repo and run the source code in an IDE.
 Be sure to build the Maven project first, using the included pom.xml to satisfy the dependencies.  
 
 ## Testing:
-A suite of testing classes are included in this repo, along with a testData folder. The test data folder includes the original XML and JSON files after which this utility is built, as well as "broken or modified" versions of these files to satisfy unexpected data tests.
+A suite of testing classes are included in this repo, along with a testData folder. The test data folder includes the original XML and JSON files after which this utility was built, as well as "broken or modified" versions of these files to satisfy unexpected data tests.
 
 ### Dependencies:
 - Commons-IO
