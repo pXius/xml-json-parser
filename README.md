@@ -30,7 +30,8 @@ Run the utility using 'java -jar' followed by the filepath of the file you would
 i.e.   
 `java -jar menu.jar /the/path/to/your/file.json`
 
-The utility supports sorting by name. Use 'asc' or 'desc' after the filename to sort the file in ascending or descending order respectively.  
+#### Sorting:
+The utility supports sorting by name. Use **'asc'** or **'desc'** after the filename to sort the file in ascending or descending order respectively.  
 i.e.  
 `java -jar menu.jar myfile.xml desc` or `java -jar menu.jar anotherfile.json asc`  
 
